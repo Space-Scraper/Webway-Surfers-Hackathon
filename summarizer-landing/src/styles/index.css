@@ -23,22 +23,6 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 0;
-    background: #fff;
-}
-
-.feature {
-    flex: 1;
-    margin: 0 20px;
-    padding: 20px;
-    background: #e9ecef;
-    border-radius: 8px;
-    text-align: center;
-}
-
 .how-it-works, .use-cases, .pricing {
     padding: 40px 0;
     background: #f8f9fa;
@@ -51,3 +35,129 @@ h1, h2, h3 {
     text-align: center;
     padding: 20px 0;
 }
+
+.how-it-works ul {
+    list-style-position: inside; /* brings dots closer to text */
+    display: inline-block; /* keeps the list centered under text-align: center */
+    text-align: left; /* keeps list items readable */
+    padding-left: 0; /* removes excessive padding */
+    margin: 10px 0; /* reduces top/bottom spacing */
+}
+
+.how-it-works li {
+    margin: 4px 0; /* tighter vertical spacing between items */
+}
+
+
+.use-cases ul {
+  list-style: disc;
+  list-style-position: outside;    /* important: NOT inside */
+  display: inline-block;           /* so it can be centered in the section */
+  text-align: left;
+  padding-left: 1.25rem;           /* creates the hanging indent */
+  margin: 0;
+}
+
+.use-cases li {
+  margin: 0.75rem 0;
+}
+
+.use-cases li h3,
+.use-cases li p {
+  margin: 0.1rem 0;               /* reduce default margins to avoid big gaps */
+}
+
+.features {
+  padding: 40px 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.features-header {
+  margin-bottom: 1.25rem;
+}
+
+.features-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1300px; /* Wider container to fit all 5 cards */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 👈 five equal-width columns */
+  gap: 16px;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 18px;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.12);
+}
+
+.feature-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.45;
+}
+
+.feature-card::before {
+  font-size: 0.9rem;
+  line-height: 1;
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  text-align: center;
+  margin-bottom: 6px;
+  padding-top: 0.2rem;
+  background: #f6f7f9;
+  color: #2c7a7b;
+}
+
+/* 💡 Responsive fallback for smaller screens */
+@media (max-width: 1100px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  }
+}
+
+@media (max-width: 700px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 500px) {
+  .features-grid {
+    grid-template-columns: 1fr; /* stack vertically on mobile */
+  }
+}
+
+/* (Optional) dark mode tweaks */
+@media (prefers-color-scheme: dark) {
+  .features { background: #0f1115; }
+  .feature-card { background: #161a22; border-color: rgba(255,255,255,0.08); }
+  .feature-card:hover { border-color: rgba(255,255,255,0.16); box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+  .feature-card p { color: #b6bcc8; }
+}
+
+
+

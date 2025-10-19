@@ -4,6 +4,7 @@ const UseCases: React.FC = () => {
     return (
         <section id="use-cases" className="use-cases">
             <h2>Use Cases</h2>
+            <p></p>
             <ul>
                 <li>
                     <h3>Academic Research</h3>

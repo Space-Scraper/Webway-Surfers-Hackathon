@@ -4,18 +4,21 @@ const Pricing: React.FC = () => {
     return (
         <section id="pricing" className="pricing">
             <h2>Pricing Plans</h2>
+            <p></p>
             <div className="pricing-plans">
                 <div className="plan">
                     <h3>Basic Plan</h3>
                     <p>Perfect for individuals who need occasional summarization.</p>
                     <p>Price: $9.99/month</p>
                     <button>Choose Plan</button>
+                    <p></p>
                 </div>
                 <div className="plan">
                     <h3>Pro Plan</h3>
                     <p>Ideal for professionals who require frequent summarization.</p>
                     <p>Price: $19.99/month</p>
                     <button>Choose Plan</button>
+                    <p></p>
                 </div>
                 <div className="plan">
                     <h3>Enterprise Plan</h3>
